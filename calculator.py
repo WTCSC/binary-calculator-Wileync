@@ -62,9 +62,9 @@ def binary_calculator(bin1, bin2, operator):
     sum_of_bin2 = tpos1 + tpos2 + tpos3 + tpos4 + tpos5 + tpos6 + tpos7 + tpos8
 
 
-    print(sum_of_bin1)
-    print(sum_of_bin2)
-    print(operator)
+    #print(sum_of_bin1)
+    #print(sum_of_bin2)
+    #print(operator)
     answer_num = 0
     #if bin1[0][1][2][3][4][5][6][7] in "23456789":
     #for i in range(8):
@@ -89,42 +89,46 @@ def binary_calculator(bin1, bin2, operator):
                     answer_num = (sum_of_bin1 * sum_of_bin2)
                 if operator == "/":
                     answer_num = int(math.floor(sum_of_bin1 / sum_of_bin2))
-                print(answer_num)
+                #print(answer_num)
                 if answer_num < 0:
                     print("Overflow")
-                if answer_num > 256:
+                    return()
+                if answer_num > 255:
                     print("Overflow")
-                bin_empty = "00000000"
-                bin_list = list(bin_empty)
-                if answer_num >= 128:
-                    bin_list[0] = "1"
-                    answer_num = answer_num - 128
-                if answer_num >= 64:
-                    bin_list[1] = "1"
-                    answer_num = answer_num - 64
-                if answer_num >= 32:
-                    bin_list[2] = "1"
-                    answer_num = answer_num - 32
-                if answer_num >= 16:
-                    bin_list[3] = "1"
-                    answer_num = answer_num - 16
-                if answer_num >= 8:
-                    bin_list[4] = "1"
-                    answer_num = answer_num - 8
-                if answer_num >= 4:
-                    bin_list[5] = "1"
-                    answer_num = answer_num - 4
-                if answer_num >= 2:
-                    bin_list[6] = "1"
-                    answer_num = answer_num - 2
-                if answer_num >= 1:
-                    bin_list[7] = "1"
-                    answer_num = answer_num - 1
+                    return()
+                else:
+                    bin_empty = "00000000"
+                    bin_list = list(bin_empty)
+                    if answer_num >= 128:
+                        bin_list[0] = "1"
+                        answer_num = answer_num - 128
+                    if answer_num >= 64:
+                        bin_list[1] = "1"
+                        answer_num = answer_num - 64
+                    if answer_num >= 32:
+                        bin_list[2] = "1"
+                        answer_num = answer_num - 32
+                    if answer_num >= 16:
+                        bin_list[3] = "1"
+                        answer_num = answer_num - 16
+                    if answer_num >= 8:
+                        bin_list[4] = "1"
+                        answer_num = answer_num - 8
+                    if answer_num >= 4:
+                        bin_list[5] = "1"
+                        answer_num = answer_num - 4
+                    if answer_num >= 2:
+                        bin_list[6] = "1"
+                        answer_num = answer_num - 2
+                    if answer_num >= 1:
+                        bin_list[7] = "1"
+                        answer_num = answer_num - 1
 
-                bin_list = ''.join(bin_list)                                        
-                print(bin_list)
-                print(answer_num)
+                    bin_list = ''.join(bin_list)                                        
+                    print(bin_list)
+                    return()
+                #print(answer_num)
                                 
 
 
-binary_calculator("11001000", "11000001", "+")
+binary_calculator("00000001", "00000001", "+")
