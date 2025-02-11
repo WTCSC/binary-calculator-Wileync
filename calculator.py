@@ -151,7 +151,7 @@ def binary_calculator(bin1, bin2, operator): #defines our function and accecpts 
                             bin_list = ''.join(bin_list) #joins the list together                                       
                             
                             return(bin_list) #returns the correct string
-                                
+                            
 
 
-#binary_calculator("00000001", "00000001", "+") #calls our function and gives it the manual inputs.
+binary_calculator("00000001", "00000001", "+") #calls our function and gives it the manual inputs.
